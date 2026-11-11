@@ -1,0 +1,13 @@
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  min-width: 0;
+}
+.padded { padding: 22px; }
+.header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 15px; }
+.title { margin: 0; font-size: 20px; }
+
+@media (max-width: 650px) {
+  .padded { padding: 17px; }
+}

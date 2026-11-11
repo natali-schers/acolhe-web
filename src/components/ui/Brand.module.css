@@ -1,0 +1,9 @@
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--color-primary); font-size: 22px; }
+.mark {
+  width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center;
+  color: var(--color-text-on-primary); background: var(--color-primary);
+}
+.lg { font-size: 30px; }
+.lg .mark { width: 50px; height: 50px; }
+.inverted { color: var(--color-text-on-primary); }
+.inverted .mark { background: var(--color-surface); color: var(--color-primary); }

@@ -1,0 +1,16 @@
+.tabs { display: flex; overflow-x: auto; }
+.tab { border: 0; background: none; white-space: nowrap; color: var(--color-text-muted); }
+
+.underline { border-bottom: 1px solid var(--color-border); margin: 25px 0; }
+.underline .tab { padding: 13px 17px; border-bottom: 3px solid transparent; }
+.underline .active { color: var(--color-primary); font-weight: 700; border-bottom-color: var(--color-primary); }
+
+.pills { gap: 8px; margin-bottom: 15px; }
+.pills .tab { border: 1px solid var(--color-border); border-radius: 20px; background: var(--color-surface); padding: 8px 15px; color: var(--color-text); }
+.pills .active { border-color: var(--color-primary); background: var(--color-primary-soft); color: var(--color-primary); font-weight: 700; }
+
+.segmented { gap: 4px; }
+.segmented .tab { background: var(--color-surface); padding: 10px 18px; }
+.segmented .tab:first-child { border-radius: 10px 0 0 10px; }
+.segmented .tab:last-child { border-radius: 0 10px 10px 0; }
+.segmented .active { background: var(--color-primary); color: var(--color-text-on-primary); font-weight: 700; }

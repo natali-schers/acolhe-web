@@ -1,0 +1,17 @@
+.overlay {
+  position: fixed; z-index: 30; inset: 0; padding: 20px;
+  background: rgba(15, 30, 28, .55); display: grid; place-items: center;
+  animation: fade-in .15s ease-out;
+}
+.box {
+  background: var(--color-surface); border-radius: var(--radius-xl); padding: 28px;
+  width: min(520px, 100%); max-height: calc(100vh - 40px); overflow: auto;
+  box-shadow: var(--shadow-modal); outline: none;
+}
+.centered { text-align: center; }
+.header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.centered .header { justify-content: center; }
+.title { margin: 0; font-size: 24px; }
+.close { border: 0; background: none; width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px; color: var(--color-text-muted); }
+.close:hover { background: var(--color-surface-muted); }
+.centered .close { position: absolute; opacity: 0; pointer-events: none; }

@@ -1,0 +1,29 @@
+.back { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 25px; font-weight: 700; text-decoration: none; }
+.layout { display: grid; grid-template-columns: 2fr 1fr; gap: 22px; align-items: start; }
+.formTitle { margin: 0 0 8px; font-size: 20px; }
+.item { border: 0; border-bottom: 1px solid var(--color-border-soft); padding: 0 0 12px; margin: 0 0 14px; }
+.item legend { font-weight: 700; color: var(--color-primary); font-size: 13px; text-transform: uppercase; letter-spacing: 1px; padding: 0; }
+.row { display: grid; grid-template-columns: 1.4fr 1fr; gap: 14px; }
+
+.summary { position: sticky; top: 96px; }
+.summary hr { border: 0; border-top: 1px solid var(--color-border); margin: 18px 0; }
+.summary > span { display: flex; flex-direction: column; margin: 0 0 16px; }
+.summary small { color: var(--color-text-muted); }
+.summaryItem h3 { margin: 6px 0 2px; }
+.summaryItem p { margin: 0 0 8px; color: var(--color-text-muted); }
+
+.modalText { line-height: 1.5; color: var(--color-text-muted); }
+.signature { font-family: var(--font-signature); font-size: 28px; background: #f7f5f0; border: 1px dashed #bbb; padding: 18px; margin: 20px 0; }
+.signature span { display: block; font-family: var(--font-base); font-size: 12px; color: var(--color-success); margin-top: 7px; }
+
+.done { max-width: 520px; margin: 40px auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.done h1 { margin: 12px 0 0; }
+.done p { color: var(--color-text-muted); line-height: 1.5; }
+
+@media (max-width: 1000px) {
+  .layout { grid-template-columns: 1fr; }
+  .summary { position: static; }
+}
+@media (max-width: 650px) {
+  .row { grid-template-columns: 1fr; gap: 0; }
+}

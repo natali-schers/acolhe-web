@@ -1,0 +1,9 @@
+.banner { border-radius: 14px; padding: 15px 18px; display: flex; align-items: center; gap: 12px; margin-bottom: 22px; border: 1px solid transparent; }
+.icon { display: grid; }
+.text { display: flex; flex-direction: column; flex: 1; }
+.text small { margin-top: 2px; opacity: .85; }
+.success { background: var(--color-success-soft); border-color: var(--color-success-border); color: var(--color-success); }
+.warning { background: var(--color-warning-soft); border-color: var(--color-warning-border); color: var(--color-warning); }
+.danger { background: var(--color-danger-soft); border-color: var(--color-danger-border); color: var(--color-danger); }
+.primary { background: var(--color-primary-soft); color: var(--color-primary); }
+.neutral { background: var(--color-surface-muted); color: var(--color-text); }

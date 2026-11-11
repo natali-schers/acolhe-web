@@ -1,0 +1,85 @@
+.page { min-height: 100vh; display: grid; grid-template-columns: 380px 1fr; background: var(--color-background); }
+
+/* Coluna lateral (só no desktop): lista de passos */
+.aside { background: var(--color-sidebar); color: var(--color-text-on-primary); padding: 44px 36px; display: flex; flex-direction: column; gap: 34px; position: sticky; top: 0; height: 100vh; }
+.aside h2 { margin: 0 0 8px; font-size: 28px; letter-spacing: -.4px; }
+.aside p { margin: 0; line-height: 1.5; color: rgba(255, 255, 255, .88); }
+.stepList { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.stepItem { display: flex; align-items: center; gap: 14px; padding: 12px 14px; border-radius: var(--radius-md); color: rgba(255, 255, 255, .8); transition: background .25s, color .25s; }
+.stepItem[aria-current="step"] { background: rgba(255, 255, 255, .14); color: #fff; font-weight: 700; }
+.bullet { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; border: 2px solid rgba(255, 255, 255, .6); font-size: 14px; font-weight: 700; flex: none; }
+.done .bullet { background: #fff; color: var(--color-sidebar); border-color: #fff; }
+.stepItem[aria-current="step"] .bullet { border-color: #fff; }
+
+.main { display: flex; justify-content: center; align-items: flex-start; padding: 44px clamp(20px, 5vw, 80px); }
+.column { width: 100%; max-width: 660px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 22px; }
+.mobileBrand { display: none; }
+.login { color: var(--color-text-muted); font-size: 15px; margin-left: auto; }
+
+.card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); box-shadow: var(--shadow-card); padding: 36px; animation: fade-in .3s ease-out; }
+.card h1 { margin: 6px 0 8px; font-size: 32px; letter-spacing: -.5px; outline: none; }
+.lead { margin: 0 0 20px; color: var(--color-text-muted); font-size: 18px; line-height: 1.5; }
+.stepLabel { color: var(--color-text-muted); font-size: 14px; font-weight: 700; }
+
+.progress { display: none; }
+.bar { height: 8px; border-radius: 8px; background: var(--color-border); overflow: hidden; }
+.bar > span { display: block; height: 100%; background: var(--color-primary); border-radius: 8px; transition: width .35s ease; }
+
+/* Escolha de perfil */
+.choices { border: 0; padding: 0; margin: 0; display: grid; gap: 12px; min-width: 0; }
+.choices > legend { padding: 0; margin-bottom: 12px; font-weight: 700; }
+.choice { position: relative; display: flex; align-items: center; gap: 16px; padding: 18px; border: 2px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); cursor: pointer; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.choice:hover { border-color: var(--color-primary); transform: translateY(-2px); }
+.choice:has(input:checked) { border-color: var(--color-primary); background: var(--color-primary-soft); box-shadow: var(--shadow-card); }
+.choice:has(input:focus-visible) { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+.choice input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.choiceText { display: flex; flex-direction: column; gap: 3px; flex: 1; min-width: 0; }
+.choiceText small { color: var(--color-text-muted); font-size: 15px; line-height: 1.4; }
+.tick { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--color-border-strong); display: grid; place-items: center; color: transparent; flex: none; }
+.choice:has(input:checked) .tick { background: var(--color-primary); border-color: var(--color-primary); color: #fff; }
+
+/* Formulário */
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+.check { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; cursor: pointer; }
+.check input[type="checkbox"] { width: 26px; height: 26px; padding: 0; flex: none; margin: 1px 0 0; accent-color: var(--color-primary); }
+.check span { line-height: 1.45; }
+.checkError { color: var(--color-danger); font-weight: 700; margin: 0 0 8px; }
+.bullets { margin: 0 0 12px; padding-left: 22px; line-height: 1.7; }
+.panel { border: 1px solid var(--color-border); background: var(--color-surface-muted); border-radius: var(--radius-lg); padding: 16px 18px; margin: 12px 0; }
+.panel b { display: block; }
+.found { display: flex; align-items: center; gap: 14px; border-color: var(--color-success-border); background: var(--color-success-soft); }
+.contactRow { display: grid; grid-template-columns: 1fr 1fr auto; gap: 0 12px; align-items: end; }
+.contactRow button.remove { margin-bottom: 15px; }
+
+.actions { display: flex; gap: 12px; justify-content: space-between; margin-top: 26px; flex-wrap: wrap; }
+.actions > :last-child { margin-left: auto; }
+.formError { color: var(--color-danger); font-weight: 700; margin: 12px 0 0; }
+
+/* Telas de estado */
+.center { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.center h1 { margin-top: 14px; }
+.center .lead { max-width: 480px; }
+.steps { text-align: left; margin: 10px 0 18px; padding-left: 22px; line-height: 1.8; max-width: 480px; }
+.code { font-size: 44px; letter-spacing: 10px; font-weight: 700; color: var(--color-primary); background: var(--color-primary-soft); border-radius: var(--radius-lg); padding: 14px 24px 14px 34px; margin: 10px 0; }
+.spinner { animation: spin 1s linear infinite; color: var(--color-primary); }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 1000px) {
+  .page { grid-template-columns: 1fr; }
+  .aside { display: none; }
+  .main { padding: 24px 20px 40px; }
+  .mobileBrand { display: block; }
+  .progress { display: block; margin-bottom: 18px; }
+  .progress p { margin: 0 0 8px; }
+}
+@media (max-width: 650px) {
+  .main { padding: 18px 14px 32px; }
+  .card { padding: 22px 18px; border-radius: var(--radius-lg); }
+  .card h1 { font-size: 27px; }
+  .row2, .contactRow { grid-template-columns: 1fr; }
+  .contactRow button.remove { margin: -6px 0 10px; justify-self: start; }
+  .actions { flex-direction: column-reverse; }
+  .actions > * { width: 100%; margin-left: 0 !important; }
+  .code { font-size: 34px; letter-spacing: 6px; padding: 12px 18px 12px 24px; }
+}
